@@ -1,4 +1,4 @@
-## usersテーブル
+# usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -10,7 +10,8 @@
 - has_many :masks, through: :mask_users
 - has_many :mask_users
 
-## masksテーブル
+
+# masksテーブル
 ### アソシエーション
 - has_many :sizes, through: :mask_sizes
 - has_many :sizes
@@ -21,7 +22,8 @@
 - has_many :prices, through: :mask_prices
 - has_many :prices 
 
-## sizesテーブル
+
+# sizesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |size|integer|null: false|
@@ -29,7 +31,8 @@
 - has_many: masks, through: :mask_sizes
 - has_many: masks
 
-## makersテーブル
+
+# makersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -37,7 +40,8 @@
 - has_many: masks, through: :mask_makers
 - has_many: masks
 
-## stocksテーブル
+
+# stocksテーブル
 |Column|Type|Options|
 |------|----|-------|
 |stock|integer|null :false|
@@ -45,7 +49,8 @@
 - has_many: masks, through: :mask_stocks
 - has_many: masks
 
-## pricesテーブル
+
+# pricesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |price|integer|null :false|
@@ -53,7 +58,8 @@
 - has_many: masks, through: :mask_prices
 - has_many: masks
 
-## mask_usersテーブル
+
+# mask_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |mask_id|integer|null: false, foreign_key: true|
@@ -62,7 +68,8 @@
 - belongs_to :mask
 - belongs_to :user
 
-## mask_sizesテーブル
+
+# mask_sizesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |mask_id|integer|null: false, foreign_key: true|
@@ -71,7 +78,8 @@
 - belongs_to :mask
 - belongs_to :size
 
-## mask_makersテーブル
+
+# mask_makersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |mask_id|integer|null: false, foreign_key: true|
@@ -80,7 +88,8 @@
 - belongs_to :mask
 - belongs_to :maker
 
-## mask_stocksテーブル
+
+# mask_stocksテーブル
 |Column|Type|Options|
 |------|----|-------|
 |mask_id|integer|null: false, foreign_key: true|
@@ -89,7 +98,8 @@
 - belongs_to :mask
 - belongs_to :stock
 
-## mask_pricesテーブル
+
+# mask_pricesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |mask_id|integer|null: false, foreign_key: true|
