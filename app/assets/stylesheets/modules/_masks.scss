@@ -89,6 +89,7 @@ body {
       &:hover {
         background-color: skyblue;
         color: black;
+        transition: 0.8s ;
       }
     }
   }
@@ -107,5 +108,42 @@ body {
   }
 }
 
+//confirm
+.confirm {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  right: 50px;
+  &__message {
+    margin-bottom: 20px;
+    h1{
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+  }
+  &__answer {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__box {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      border: 1px solid white;
+      display: block;
+      height: 50px;
+      width: 150px;
+      margin: auto;
+      &:hover {
+        background-color: white;
+        color: black;
+        transition: 0.8s ;
+      }
+    }
+  }
+}
 
 
