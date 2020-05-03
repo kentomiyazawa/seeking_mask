@@ -1,0 +1,14 @@
+= render partial: "views/masks/subheader"
+
+.users--form
+  %h2 Forgot your password?
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .actions
+      = f.submit "Send"
+  = link_to "Sign Up", new_user_registration_path, class: "users--form__btn"
+  = link_to "Log In", new_user_session_path, class: "users--form__btn"

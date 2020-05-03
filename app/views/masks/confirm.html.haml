@@ -1,9 +1,4 @@
-.header
-  .header__left
-    %h1
-      Place You Can Buy The Mask
-  .header__center
-    = link_to "Seeking Mask", root_path, class: "header__center__site-name"
+= render partial: "masks/subheader"
 
 .confirm
   .confirm__message
@@ -11,5 +6,7 @@
       店舗の方ですか？
   .confirm__answer    
     = link_to raw("NO<br/>トップ画面へ"), root_path, class: "confirm__answer__box"
-    = link_to raw("YES<br/>ログイン画面へ"), "#", class: "confirm__answer__box"
-    = link_to raw("YES<br/>新規登録画面へ"), "#", class: "confirm__answer__box"
+    = link_to raw("YES<br/>ログイン画面へ"), new_user_session_path, class: "confirm__answer__box"
+    = link_to raw("YES<br/>新規登録画面へ"), new_user_registration_path, class: "confirm__answer__box"
+
+= render partial: "footer"

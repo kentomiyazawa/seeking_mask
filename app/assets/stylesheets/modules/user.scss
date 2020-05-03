@@ -1,0 +1,27 @@
+.users-situation {
+  height: 600px;
+  width: 650px;
+  position: absolute;
+  right: 50px;
+  margin-top: 15px;
+  background-color: red;
+  h1 {
+    height: 40px;
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+  }
+  &__contents {
+    height: 560px;
+    background-color: skyblue;
+    &__content {
+      height: 40px;
+      background-color: yellow;
+      display: flex;
+      justify-content: space-around;
+      line-height: 40px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+
+//ログイン
+.users--form {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  right: 50px;
+  h2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .field {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .actions {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    input {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      border: 1px solid white;
+      display: block;
+      height: 30px;
+      width: 80px;
+      margin: auto;
+      background-color: transparent;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: black;
+        transition: 0.8s ;
+      }
+    }
+  }
+  &__btn {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    display: block;
+    height: 30px;
+    width: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: 0.8s ;
+    }
+  }
+  &__btn2 {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    display: block;
+    height: 30px;
+    width: 200px;
+    margin: auto;
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: 0.8s ;
+    }
+  }
+
+}
