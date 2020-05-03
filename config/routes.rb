@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "masks#index"
+  root to: 'masks#index'  
+  get  '/confirm',    to: 'masks#confirm'
+  resources :masks, only: :index
+  resources :users, only: :show
 end
