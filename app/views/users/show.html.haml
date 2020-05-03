@@ -1,14 +1,26 @@
 .wrapper
-  = render partial: "header"
+  = render partial: "masks/mainheader"
 
-  .users-situation
-    %h1
-      在庫状況
-    .users-situation__contents
-      .users-situation__contents__content
-        .users-situation__contents__content__maker
-          パナソニック
-        .users-situation__contents__content__size
-          大人用
-        .users-situation__contents__content__stock
-          50箱
+  .shop-detail
+    .shop-detail__info
+      .shop-detail__info__name
+        = @user.name
+      .shop-detail__info__address
+        = @user.address
+      .shop-detail__info__phone
+        = @user.phone
+    .shop-detail__stocks
+      %h1
+        在庫状況
+      - @masks.each do |mask|
+        .shop-detail__stocks__stock
+          .shop-detail__stocks__stock__maker
+            = mask.maker
+          .shop-detail__stocks__stock__size
+            = mask.size
+          .shop-detail__stocks__stock__price
+            = "#{mask.price}円/箱"
+          .shop-detail__stocks__stock__quanity
+            = "#{mask.stock}箱" 
+
+  =render partial: "masks/footer"
