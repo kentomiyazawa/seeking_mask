@@ -2,5 +2,6 @@
   %h1
     店舗一覧
   .contents__shops
-    = link_to "ドンキ渋谷店", "#", class: "contents__shops__name"
+  - @users.each do |user|
+    = link_to user.name, mask_path(user.id) , class: "contents__shops__name"
     

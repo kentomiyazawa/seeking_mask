@@ -1,14 +1,18 @@
 .wrapper
-  = render partial: "header"
+  = render partial: "usersheader"
 
   .users-situation
     %h1
       在庫状況
     .users-situation__contents
-      .users-situation__contents__content
-        .users-situation__contents__content__maker
-          パナソニック
-        .users-situation__contents__content__size
-          大人用
-        .users-situation__contents__content__stock
-          50箱
+      - @masks.each do |mask|
+        .users-situation__contents__content
+          .users-situation__contents__content__maker
+            = mask.maker
+          .users-situation__contents__content__size
+            = mask.size
+          .users-situation__contents__content__stock
+            = "#{mask.stock}箱" 
+          = link_to "在庫編集", edit_mask_path(mask.id), class: "users-situation__contents__content__edit"
+  .users__btn
+    = link_to "新規在庫", new_mask_path, class: "users__btn__new"

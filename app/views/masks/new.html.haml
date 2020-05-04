@@ -1,0 +1,23 @@
+.wrapper
+  = render partial: "subheader"
+
+  .mask-form
+    %h1
+      新規在庫入力画面
+    = form_for @mask do |f|
+      .new_mask__maker
+        = f.label :maker, "メーカー名:"
+        = f.text_field :maker
+      .new_mask__size
+        = f.label :size, "サイズ:"
+        = f.select :size, [["大人用","大人用"],["子供用","子供用"]]
+      .new_mask__stock
+        = f.label :stock, "入荷数(箱)"
+        = f.number_field :stock
+      .new_mask__price
+        = f.label :price, "値段(/1箱)"
+        = f.number_field :price
+      .new_mask__send-btn
+        = f.submit "Send"
+
+    

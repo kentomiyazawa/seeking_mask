@@ -1,13 +1,13 @@
+
+//店舗トップ画面
 .users-situation {
   height: 600px;
   width: 650px;
   position: absolute;
   right: 50px;
   margin-top: 15px;
-  background-color: red;
   h1 {
     height: 40px;
-    background-color: blue;
     font-size: 25px;
     color: white;
     text-align: center;
@@ -15,13 +15,48 @@
   }
   &__contents {
     height: 560px;
-    background-color: skyblue;
     &__content {
-      height: 40px;
-      background-color: yellow;
+      height: 30px;
       display: flex;
       justify-content: space-around;
-      line-height: 40px;
+      line-height: 30px;
+      background-color: white;
+      opacity: 0.8;
+      margin-bottom: 10px;
+      > div {
+        text-align: center;
+        width: 100px;
+      }
+      &__edit {
+        text-decoration: none;
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}
+
+.users__btn {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  width: 650px;
+  height: 40px;
+
+  &__new {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: 0.8s ;
     }
   }
 }

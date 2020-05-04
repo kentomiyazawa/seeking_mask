@@ -1,0 +1,25 @@
+.wrapper
+  = render partial: "masks/mainheader"
+
+  .shop-detail
+    .shop-detail__info
+      .shop-detail__info__name
+        = @user.name
+      .shop-detail__info__address
+        = @user.address
+      .shop-detail__info__phone
+        = @user.phone
+    .shop-detail__stocks
+      %h1
+        在庫状況
+      - @masks.each do |mask|
+        .shop-detail__stocks__stock
+          .shop-detail__stocks__stock__maker
+            = mask.maker
+          .shop-detail__stocks__stock__size
+            = mask.size
+          .shop-detail__stocks__stock__price
+            = "#{mask.price}円/箱"
+          .shop-detail__stocks__stock__quanity
+            = "#{mask.stock}箱" 
+  =render partial: "masks/footer"
