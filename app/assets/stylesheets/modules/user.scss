@@ -16,12 +16,22 @@
   &__contents {
     height: 560px;
     &__content {
-      height: 40px;
+      height: 30px;
       display: flex;
       justify-content: space-around;
-      line-height: 40px;
+      line-height: 30px;
       background-color: white;
       opacity: 0.8;
+      margin-bottom: 10px;
+      > div {
+        text-align: center;
+        width: 100px;
+      }
+      &__edit {
+        text-decoration: none;
+        background-color: red;
+        color: white;
+      }
     }
   }
 }
@@ -32,23 +42,7 @@
   bottom: 20px;
   width: 650px;
   height: 40px;
-  display: flex;
-  justify-content: space-around;
-  &__edit {
-    display: block;
-    text-decoration: none;
-    color: white;
-    border: solid 1px white;
-    font-size: 20px;
-    height: 30px;
-    width: 100px;
-    text-align: center;
-    &:hover {
-      background-color: white;
-      color: black;
-      transition: 0.8s ;
-    }
-  }
+
   &__new {
     display: block;
     text-decoration: none;
@@ -58,41 +52,11 @@
     height: 30px;
     width: 100px;
     text-align: center;
+    margin: auto;
     &:hover {
       background-color: white;
       color: black;
       transition: 0.8s ;
-    }
-  }
-}
-
-//顧客用店舗詳細
-.shop-detail {
-  height: 600px;
-  width: 650px;
-  position: absolute;
-  right: 50px;
-  margin-top: 15px;
-  &__info {
-    text-align: center;
-    color: white;
-    &__name {
-      font-size: 25px;
-    }
-  }
-  &__stocks {
-    height: 500px;
-    h1 {
-      color: white;
-      text-align: center;
-      font-size: 20px;
-    }
-    &__stock {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-around;
-      background-color: white;
-      opacity: 0.8;
     }
   }
 }

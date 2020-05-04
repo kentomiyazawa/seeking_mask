@@ -3,5 +3,5 @@
     店舗一覧
   .contents__shops
   - @users.each do |user|
-    = link_to user.name, user_path(user.id) , class: "contents__shops__name"
+    = link_to user.name, mask_path(user.id) , class: "contents__shops__name"
     
