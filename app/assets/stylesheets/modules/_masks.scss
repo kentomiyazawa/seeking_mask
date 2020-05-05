@@ -111,12 +111,37 @@ body {
     font-size: 20px;
     color: white;
     text-align: center;
+    height: 30px;
   }
   &__shops {
+    width: 500px;
+    height: 520px;
+    .user_search {
+      display: flex;
+      &__input {
+        display: block;
+        background-color: transparent;
+        margin-left: 150px;
+        border: 1px solid white;
+        color: white;
+        &::placeholder {
+          color: white;
+          opacity: 0.8;
+        }
+      }
+      &__btn {
+        display: block;
+        background-color: transparent;
+        color: white;
+        margin-left: 20px;
+        width: 60px;
+        cursor: pointer;
+      }
+    }
     &__name {
-      height: 50px;
+      height: 40px;
       text-align: center;
-      line-height: 50px;
+      line-height: 40px;
       color: black;
       display: block;
       margin-top: 10px;
