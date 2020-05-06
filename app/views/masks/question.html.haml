@@ -1,0 +1,31 @@
+.wrapper
+  = render partial: "mainheader"
+
+  .faq
+    %h1
+      このアプリについて
+    %ul.faq__list
+      %li.faq__list__item
+        %h2.faq__list__item__question
+          アプリを作った経緯は?
+        .faq__list__item__answer
+          %a
+            台湾のIT大臣がコロナ感染抑制の為にマスクの売っている場所がわかるアプリを作ったというニュースをみました。
+            %br
+            私も同じような物を作成すれば日本のIT大臣になれると思い作成しました。
+            %br
+            冗談はさておき、台湾の物とは遠く及びませんがコロナ抑制のためにも少しでも役に立てればと思い作成しました。
+      %li.faq__list__item
+        %h2.faq__list__item__question
+          作成ツールは?
+        .faq__list__item__answer
+          %a
+            Haml、Sass、jQuery、Ruby on rails、gem各種
+      %li.faq__list__item
+        %h2.faq__list__item__question
+          作成期間は?
+        .faq__list__item__answer
+          %a
+            約２週間かかりました。一回挫折しました(笑)
+
+  = render partial: "footer"
