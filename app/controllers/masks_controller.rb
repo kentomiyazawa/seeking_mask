@@ -4,6 +4,8 @@ class MasksController < ApplicationController
 
   def index
     @users = User.all
+    @search = User.ransack(params[:q])
+    @results = @search.result
   end
 
   def show

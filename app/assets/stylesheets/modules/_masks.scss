@@ -111,12 +111,38 @@ body {
     font-size: 20px;
     color: white;
     text-align: center;
+    height: 30px;
   }
   &__shops {
+    width: 500px;
+    height: 520px;
+    overflow: scroll;
+    .user_search {
+      display: flex;
+      &__input {
+        display: block;
+        background-color: transparent;
+        margin-left: 150px;
+        border: 1px solid white;
+        color: white;
+        &::placeholder {
+          color: white;
+          opacity: 0.8;
+        }
+      }
+      &__btn {
+        display: block;
+        background-color: transparent;
+        color: white;
+        margin-left: 20px;
+        width: 60px;
+        cursor: pointer;
+      }
+    }
     &__name {
-      height: 50px;
+      height: 40px;
       text-align: center;
-      line-height: 50px;
+      line-height: 40px;
       color: black;
       display: block;
       margin-top: 10px;
@@ -160,13 +186,14 @@ body {
       font-size: 25px;
     }
   }
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
   &__stocks {
     height: 500px;
-    h1 {
-      color: white;
-      text-align: center;
-      font-size: 20px;
-    }
+    overflow: scroll;
     &__stock {
       margin-bottom: 10px;
       display: flex;
@@ -381,4 +408,33 @@ body {
     }
     
   }
+}
+
+//スクロールバー
+.contents__shops::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.contents__shops::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: 0 0 4px #aaa inset;
+}
+.contents__shops::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255,255,255,0.8);
+
+}
+
+.shop-detail__stocks::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.shop-detail__stocks::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: 0 0 4px #aaa inset;
+}
+.shop-detail__stocks::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255,255,255,0.8);
+
 }

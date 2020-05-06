@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   
   before_action :move_to_index, only: [:show, :edit]
 
+
   def show
     @user = User.find(params[:id])
     @masks = @user.masks
   end
-
 
   private
 
