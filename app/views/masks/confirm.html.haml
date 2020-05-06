@@ -1,11 +1,11 @@
-= render partial: "masks/subheader"
+= render partial: "mainheader"
 
 .confirm
   .confirm__message
     %h1
       店舗の方ですか？
   .confirm__answer    
-    = link_to raw("NO<br/>トップ画面へ"), root_path, class: "confirm__answer__box"
+    = link_to raw("NO<br/>トップ画面へ"), masks_path , class: "confirm__answer__box"
     = link_to raw("YES<br/>店舗用画面へ"), new_user_session_path, class: "confirm__answer__box"
     = link_to raw("YES<br/>新規登録画面へ"), new_user_registration_path, class: "confirm__answer__box"
 

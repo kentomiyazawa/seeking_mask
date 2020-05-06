@@ -1,6 +1,6 @@
 class MasksController < ApplicationController
 
-  before_action :move_to_index, except: [:index, :show, :confirm]
+  before_action :move_to_index, except: [:index, :show, :home, :confirm, :question]
 
   def index
     @users = User.all
@@ -40,6 +40,12 @@ class MasksController < ApplicationController
   end 
 
   def confirm
+  end
+
+  def home
+  end
+
+  def question
   end
 
   private

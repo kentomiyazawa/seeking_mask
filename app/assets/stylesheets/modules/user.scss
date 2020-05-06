@@ -35,28 +35,3 @@
     }
   }
 }
-
-.users__btn {
-  position: absolute;
-  right: 50px;
-  bottom: 20px;
-  width: 650px;
-  height: 40px;
-
-  &__new {
-    display: block;
-    text-decoration: none;
-    color: white;
-    border: solid 1px white;
-    font-size: 20px;
-    height: 30px;
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    &:hover {
-      background-color: white;
-      color: black;
-      transition: 0.8s ;
-    }
-  }
-}
