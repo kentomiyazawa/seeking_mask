@@ -25,6 +25,9 @@ class MasksController < ApplicationController
   
   def edit
     @mask = Mask.find(params[:id])
+    if @mask.user_id != current_user.id
+      redirect_to root_path
+    end
   end
 
   def update
