@@ -2,6 +2,7 @@ class MasksController < ApplicationController
 
   before_action :move_to_index, except: [:index, :show, :home, :confirm, :question]
   before_action :move_to_index_if_not_sellor, only: :edit
+  before_action :set_mask, only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -28,11 +29,9 @@ class MasksController < ApplicationController
   end
   
   def edit
-    @mask = Mask.find(params[:id])
   end
 
   def update
-    @mask = Mask.find(params[:id])
     if @mask.update(mask_params)
       redirect_to user_path(current_user.id)
     else
@@ -41,8 +40,7 @@ class MasksController < ApplicationController
   end
 
   def destroy
-    mask = Mask.find(params[:id])
-    mask.destroy
+    @mask.destroy
     redirect_to user_path(current_user.id)
   end 
 
@@ -59,6 +57,10 @@ class MasksController < ApplicationController
 
   def mask_params
     params.require(:mask).permit(:maker, :size, :stock, :price).merge(user_id: current_user.id)
+  end
+
+  def set_mask
+    @mask = Mask.find(params[:id])
   end
 
   def move_to_index

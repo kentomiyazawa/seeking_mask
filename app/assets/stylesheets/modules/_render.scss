@@ -24,7 +24,7 @@ body {
     text-align: center;
     width: 33%;
     h1 {
-      color: white;
+      color: $white;
       line-height: 100px;
       font-size: 25px;
       font-family: cursive;
@@ -36,7 +36,7 @@ body {
     line-height: 100px;
     &__site-name {
       text-decoration: none;
-      color: white;
+      color: $white;
       font-size: 25px;
       font-family: cursive;
     }
@@ -45,11 +45,11 @@ body {
 
 //ドロップダウン
 .droppdown {
-  color: white;
+  color: $white;
   display: block;
   height: 50px;
   width: 100px;
-  border: 1px solid white;
+  border: $border;
   text-align: center;
   margin: auto;
   line-height: 50px;
@@ -58,19 +58,19 @@ body {
   right: 50px;
   z-index: 1 ;
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: $white;
+    color: $black;
   }
   &__li {
     display: none;
-    background-color: white;
+    background-color: $white;
     border-bottom: 1px solid gray;
     &:hover {
       background-color: skyblue;
     }
     &__content {
       text-decoration: none;
-      color: black;
+      color: $black;
       display: block;
     }
   }
@@ -85,7 +85,7 @@ body {
   h1 {
     text-align: center;
     font-size: 25px;
-    color: white;
+    color: $white;
     font-family: cursive;
   }
 }
@@ -97,11 +97,11 @@ body {
 }
 .contents__shops::-webkit-scrollbar-track {
   border-radius: 5px;
-  box-shadow: 0 0 4px #aaa inset;
+  box-shadow: $box-shadow;
 }
 .contents__shops::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255,255,255,0.8);
+  background: $scroll-background;
 
 }
 
@@ -111,11 +111,22 @@ body {
 }
 .shop-detail__stocks::-webkit-scrollbar-track {
   border-radius: 5px;
-  box-shadow: 0 0 4px #aaa inset;
+  box-shadow: $box-shadow;
 }
 .shop-detail__stocks::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255,255,255,0.8);
+  background: $scroll-background;
+}
 
-
+.users-situation__contents::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.users-situation__contents::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+.users-situation__contents::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: $scroll-background;
 }

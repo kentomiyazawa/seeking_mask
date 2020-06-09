@@ -5,6 +5,7 @@ FactoryBot.define do
     price                 {"10000"}
     stock                 {"10000"}
     size                  {"大人用"}
+    user
   end
 
 end

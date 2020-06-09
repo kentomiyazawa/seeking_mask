@@ -2,12 +2,11 @@
 .contents
   %h1
     店舗一覧
-  
-    = search_form_for@search, url: masks_path do |f|
-      = f.search_field :name_cont, placeholder: "search...", class: "user_search__input"
-      = f.submit "検索", class: "user_search__btn"
-    .contents__shops
-      - @results.zip(@users) do |result, user|
-        = link_to result.name, mask_path(user.id) , class: "contents__shops__name"
+  = search_form_for@search, url: masks_path do |f|
+    = f.search_field :name_cont, placeholder: "search...", class: "user_search__input"
+    = f.submit "検索", class: "user_search__btn"
+  .contents__shops
+    - @results.zip(@users) do |result, user|
+      = link_to result.name, mask_path(user.id) , class: "contents__shops__name"
 
 = render partial: "footer"

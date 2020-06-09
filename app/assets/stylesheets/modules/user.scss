@@ -9,7 +9,7 @@
   h1 {
     height: 40px;
     font-size: 25px;
-    color: white;
+    color: $white;
     text-align: center;
     line-height: 40px;
   }
@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-around;
       line-height: 30px;
-      background-color: white;
+      background-color: $white;
       opacity: 0.8;
       margin-bottom: 10px;
       > div {
@@ -30,8 +30,8 @@
       }
       &__edit {
         text-decoration: none;
-        background-color: red;
-        color: white;
+        background-color: $red;
+        color: $white;
       }
     }
   }

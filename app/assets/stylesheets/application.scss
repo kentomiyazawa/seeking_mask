@@ -1,3 +1,10 @@
+$border: 1px solid white;
+$white: #fff;
+$black: #000;
+$red: #FF0000;
+$box-shadow: 0 0 4px #aaa inset;
+$scroll-background:  rgba(255,255,255,0.8);
+
 @import "reset";
 @import "modules/masks";
 @import "modules/user";
@@ -5,3 +12,5 @@
 @import "modules/render";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+

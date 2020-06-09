@@ -1,4 +1,5 @@
 
+
 //contents
 .contents {
   height: 600px;
@@ -8,49 +9,52 @@
   margin-top: 15px;
   h1 {
     font-size: 20px;
-    color: white;
+    color: $white;
     text-align: center;
     height: 30px;
+  }
+  .user_search {
+    display: flex;
+    height: 30px;
+    font-size: 20px;
+    &__input {
+      display: block;
+      margin-left: 150px;
+      background-color: transparent;
+      border: $border;
+      color: $white;
+      &::placeholder {
+        color: $white;
+        opacity: 0.8;
+      }
+    }
+    &__btn {
+      display: block;
+      background-color: transparent;
+      border: $border;
+      color: $white;
+      margin-left: 20px;
+      width: 60px;
+      cursor: pointer;
+    }
   }
   &__shops {
     width: 500px;
     height: 520px;
     overflow: scroll;
-    .user_search {
-      display: flex;
-      &__input {
-        display: block;
-        background-color: transparent;
-        margin-left: 150px;
-        border: 1px solid white;
-        color: white;
-        &::placeholder {
-          color: white;
-          opacity: 0.8;
-        }
-      }
-      &__btn {
-        display: block;
-        background-color: transparent;
-        color: white;
-        margin-left: 20px;
-        width: 60px;
-        cursor: pointer;
-      }
-    }
     &__name {
       height: 40px;
       text-align: center;
       line-height: 40px;
-      color: black;
+      color: $black;
       display: block;
       margin-top: 10px;
       text-decoration: none;
-      background-color: white;
+      background-color: $white;
       opacity: 0.8;
       &:hover {
         background-color: skyblue;
-        color: black;
+        color: $black;
         transition: 0.8s ;
       }
     }
@@ -68,13 +72,13 @@
   margin-top: 15px;
   &__info {
     text-align: center;
-    color: white;
+    color: $white;
     &__name {
       font-size: 25px;
     }
   }
   h1 {
-    color: white;
+    color: $white;
     text-align: center;
     font-size: 20px;
   }
@@ -85,7 +89,7 @@
       margin-bottom: 10px;
       display: flex;
       justify-content: space-around;
-      background-color: white;
+      background-color: $white;
       opacity: 0.8;
       > div {
         text-align: center;
@@ -105,7 +109,7 @@
     margin-bottom: 20px;
     h1{
       font-size: 20px;
-      color: white;
+      color: $white;
       text-align: center;
     }
   }
@@ -118,15 +122,15 @@
     &__box {
       text-decoration: none;
       text-align: center;
-      color: white;
-      border: 1px solid white;
+      color: $white;
+      border: $border;
       display: block;
       height: 50px;
       width: 150px;
       margin: auto;
       &:hover {
-        background-color: white;
-        color: black;
+        background-color: $white;
+        color: $black;
         transition: 0.8s ;
       }
     }
@@ -143,14 +147,14 @@
   &__errors {
     ul {
       li {
-        color: red;
+        color: $red;
         font-size: 20px;
         font-weight: bold;
       }
     }
   }
   h1 {
-    color: white;
+    color: $white;
     text-align: center;
     font-size: 20px;
   }
@@ -163,7 +167,7 @@
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
-      color: white;
+      color: $white;
     }
     .form__maker {
       input {
@@ -195,10 +199,10 @@
     .form__send-btn{
       input{
         background-color: transparent;
-        color: white;
+        color: $white;
         text-decoration: none;
         text-align: center;
-        border: 1px solid white;
+        border: $border;
         display: block;
         height: 30px;
         width: 80px;
@@ -206,8 +210,8 @@
         margin-bottom: 20px;
         cursor: pointer;
         &:hover {
-          background-color: white;
-          color: black;
+          background-color: $white;
+          color: $black;
           transition: 0.8s ;
         }
       }
@@ -224,23 +228,23 @@
   margin-top: 15px;
   &__delete-btn {
     text-decoration: none;
-    color: white;
+    color: $white;
     display: block;
     height: 30px;
     width: 80px;
-    border: 1px solid white;
+    border: $border;
     text-align: center;
     margin: auto;
     line-height: 30px;
     font-size: 18px;
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: $white;
+      color: $black;
       transition: 0.8s ;
     }
   }
   h1 {
-    color: white;
+    color: $white;
     text-align: center;
     font-size: 20px;
   }
@@ -253,7 +257,7 @@
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
-      color: white;
+      color: $white;
     }
     &__maker {
       input {
@@ -285,10 +289,10 @@
     &__send-btn{
       input{
         background-color: transparent;
-        color: white;
+        color: $white;
         text-decoration: none;
         text-align: center;
-        border: 1px solid white;
+        border: $border;
         display: block;
         height: 30px;
         width: 80px;
@@ -296,8 +300,8 @@
         margin-bottom: 20px;
         cursor: pointer;
         &:hover {
-          background-color: white;
-          color: black;
+          background-color: $white;
+          color: $black;
           transition: 0.8s ;
         }
       }
@@ -315,7 +319,7 @@
   margin-top: 15px;
   h1 {
     font-size: 25px;
-    color: white;
+    color: $white;
     text-align: center;
   }
   &__list {
@@ -326,12 +330,12 @@
       font-size: 20px;
       &__question {
         background-color: gray;
-        color: white;
+        color: $white;
       }
       &__answer {
         text-align: left;
-        background-color: white;
-        color: black;
+        background-color: $white;
+        color: $black;
         display: none;
       }
     }
