@@ -1,23 +1,12 @@
-.wrapper
-  = render partial: "users/usersheader"
+.mask-form
+  - if @mask.errors.any?
+    .mask-form__errors
+      %ul
+        - @mask.errors.full_messages.each do |message|
+          %li
+            = message
+  %h1
+    在庫編集
+  = render partial: "form"
 
-  .edit-form 
-    %h1
-      在庫編集画面
-    = form_for @mask do |f|
-      .edit_mask__maker
-        = f.label :maker, "メーカー名:"
-        = f.text_field :maker
-      .edit_mask__size
-        = f.label :size, "サイズ:"
-        = f.select :size, [["大人用","大人用"],["子供用","子供用"]]
-      .edit_mask__stock
-        = f.label :stock, "入荷数(箱)"
-        = f.number_field :stock
-      .edit_mask__price
-        = f.label :price, "値段(/1箱)"
-        = f.number_field :price
-      .edit_mask__send-btn
-        = f.submit "Send"
-
-    = link_to "削除", mask_path(@mask.id), method: :delete, class: "edit-form__delete-btn"
+    

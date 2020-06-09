@@ -1,0 +1,28 @@
+.header
+  .header__left
+    %h1
+      Place You Can Buy The Mask
+  .header__center
+    = link_to "Seeking Mask", root_path, class: "header__center__site-name"
+
+  %ul.droppdown
+    Menu
+    - if user_signed_in?
+      %li.droppdown__li
+        = link_to "店舗一覧", masks_path, class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "在庫状況", user_path(current_user.id), class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "新規在庫", new_mask_path, class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "店情報変更", edit_user_registration_path, class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "ログアウト", destroy_user_session_path, method: :delete , class: "droppdown__li__content"
+
+    - else
+      %li.droppdown__li
+        = link_to "店舗一覧", masks_path, class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "店舗の方", confirm_path , class: "droppdown__li__content"
+      %li.droppdown__li
+        = link_to "About", question_path, class: "droppdown__li__content"

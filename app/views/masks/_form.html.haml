@@ -1,0 +1,15 @@
+= form_for @mask do |f|
+  .form__maker
+    = f.label :maker, "メーカー名:"
+    = f.text_field :maker, placeholder: "メーカー名"
+  .form__size
+    = f.label :size, "サイズ:"
+    = f.select :size, [["大人用","大人用"],["子供用","子供用"]], prompt: "選択してください" 
+  .form__stock
+    = f.label :stock, "入荷数(箱)"
+    = f.number_field :stock, placeholder: "数字のみ入力"
+  .form__price
+    = f.label :price, "値段(/1箱)"
+    = f.number_field :price, placeholder: "数字のみ入力"
+  .form__send-btn
+    = f.submit "Send"

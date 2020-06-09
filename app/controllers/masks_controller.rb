@@ -1,6 +1,7 @@
 class MasksController < ApplicationController
 
   before_action :move_to_index, except: [:index, :show, :home, :confirm, :question]
+  before_action :move_to_index_if_not_sellor, only: :edit
 
   def index
     @users = User.all
@@ -19,21 +20,24 @@ class MasksController < ApplicationController
   
   def create
     @mask = Mask.new(mask_params)
-    @mask.save
-    redirect_to user_path(current_user.id)
+    if @mask.save
+      redirect_to user_path(current_user.id)
+    else
+      render :new
+    end
   end
   
   def edit
     @mask = Mask.find(params[:id])
-    if @mask.user_id != current_user.id
-      redirect_to root_path
-    end
   end
 
   def update
-    mask = Mask.find(params[:id])
-    mask.update(mask_params)
-    redirect_to user_path(current_user.id)
+    @mask = Mask.find(params[:id])
+    if @mask.update(mask_params)
+      redirect_to user_path(current_user.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -59,6 +63,11 @@ class MasksController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in? 
+  end
+
+  def move_to_index_if_not_sellor
+    @mask = Mask.find(params[:id])
+    redirect_to root_path unless @mask.user_id == current_user.id
   end
 
 end

@@ -1,4 +1,4 @@
-= render partial: "users/usersheader"
+
 
 .users--form
   %h2 新規登録
@@ -7,30 +7,27 @@
     .field
       = f.label :店舗名
       %br/
-      = f.text_field :name, autofocus: true, autocomplete: "name"
+      = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例) 〇〇薬局 〇〇店"
     .field
       = f.label :住所
       %br/
-      = f.text_field :address, autofocus: true, autocomplete: "off"
+      = f.text_field :address, autofocus: true, autocomplete: "off", placeholder: "例)東京都渋谷区〇〇"
     .field
       = f.label :電話番号
       %br/
-      = f.text_field :phone, autofocus: true, autocomplete: "tel"
+      = f.text_field :phone, autofocus: true, autocomplete: "tel", placeholder: "例) 000-0000-0000"
     .field
-      = f.label :email
+      = f.label :メールアドレス
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) aaa@aaa.com"
     .field
-      = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
+      = f.label :パスワード
       %br/
-      = f.password_field :password, autocomplete: "new-password"
+      = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上"
     .field
-      = f.label :password_confirmation
+      = f.label :パスワード確認用
       %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password"
+      = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード確認"
     .actions
       = f.submit "Sign up"
   = link_to "Log In", new_user_session_path, class: "users--form__btn"

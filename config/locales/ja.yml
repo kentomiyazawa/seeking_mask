@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      mask:
+        maker: メーカー名
+        price: 値段
+        stock: ストック数
+        size: サイズ
