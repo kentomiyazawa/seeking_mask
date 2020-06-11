@@ -1,6 +1,9 @@
 ## アプリ名
 SeekingMask
 
+## URL
+https://seeking-mask.herokuapp.com/
+
 ## テストアカウント
 email: test1@test
 <br>
@@ -36,7 +39,7 @@ password: testtest
 ![](https://i.gyazo.com/ff361ed8399d5d894e5a25b72fb8dc72.jpg)
 
 ## 今後実装してみたい事
-お店の住所をDBから引っ張り出して、地図上に表示してみたいです。
+お店の住所をDBから引っ張り出して、店舗詳細画面に地図を表示してみたいです。
 <br>
 また、pay.jpを使用して前払いの購入システムができたら、お店が混雑せず三密が防げるのではと思います。
 
