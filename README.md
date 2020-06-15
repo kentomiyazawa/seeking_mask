@@ -32,7 +32,7 @@ password: testtest
 ### トップ画面
 ![](https://i.gyazo.com/13a13edd1732f89972a835f1f5ebb516.jpg)
 ### 店舗一覧(一般ユーザー用)
-![](https://i.gyazo.com/a5456488c956cc83df6006b28a15a8fe.jpg)
+![](https://i.gyazo.com/74b31ea1940a3786e8d82b7fec41d22f.jpg)
 ### 店舗の在庫状況(一般ユーザー用)
 ![](https://i.gyazo.com/30b9a7ac4c0f77fd004de9ea46bebdac.jpg)
 ### 店舗の管理画面(店舗用)
