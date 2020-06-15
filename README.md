@@ -4,7 +4,7 @@ SeekingMask
 ## URL
 https://seeking-mask.herokuapp.com/
 
-## テストアカウント
+## 店舗用テストアカウント
 email: test1@test
 <br>
 password: testtest
